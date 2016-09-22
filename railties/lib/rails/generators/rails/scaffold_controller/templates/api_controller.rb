@@ -41,6 +41,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   # DELETE <%= route_url %>/1
   def destroy
     @<%= orm_instance.destroy %>
+    render json: <%= orm_instance %>.as_json
   end
 
   private
